@@ -9,15 +9,22 @@ using UnityEngine;
 
 public class StarBehave : MonoBehaviour {
 
-    
+    AudioSource m_AudioSource;
 
 	// Use this for initialization
 	void Start () {
-        tag = "Star";	
+        tag = "Star";
+        m_AudioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+    public void playSound()
+    {
+        //there is another funciton of Playoneshot, which can input a clip and the volume
+        m_AudioSource.Play();
+    }
 }

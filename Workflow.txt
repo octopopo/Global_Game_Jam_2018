@@ -6,9 +6,11 @@
 5.instead of using button for each star, use raycast, BEWARE!!! Because we are doing a 2D game, so thing should be using 2D component, such as Raycast2D, Physic2D
 6. In the GameManager, all reference of player and star are all dragged by developer, also the answer of this level are handcrafted by developer when they type it
 7. Add a public function which player could send a circle wave, for now it would be called when game manager detect the raycast was on the player -- It suceed to call function from game manager
-
+8. adding audio source to each star, and add a simple test on each stars
 
 
 
 To-do or haven't done
-8. draw the wave with sprite creator, add a reference in player with wave object, so that player can create it (haven't done)
+1.draw the wave with sprite creator, add a reference in player with wave object, so that player can create it (haven't done)
+2. add a input of number to the playsound function of starBehave, so that it can play different clips based on that.
+3. Should game manager handling the whole event of playing sound?, or should the star handle it?

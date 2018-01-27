@@ -22,28 +22,8 @@ public class distanceManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0))
-        {
-            ///Debug.Log("Mouse is Down");
-            //Beware of the usage of 2D component
-            RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-            if (hitInfo.collider != null)
-            {
-                //Debug.Log("Hit" + hitInfo.transform.gameObject.name);
-                if(hitInfo.transform.gameObject.tag == "Star")
-                {
-                    Debug.Log("Hit" + hitInfo.transform.gameObject.name);
-                }
-                else if(hitInfo.transform.gameObject.tag == "Player")
-                {
-                    hitInfo.transform.gameObject.GetComponent<PlayerBehave>().SendSignal();
-                }
-                else
-                {
-                    Debug.Log("It didn't hit anything");
-                }
-            }
-        }
+        mouseEventHanlde();
+        keyboardEventHandle();
     }
 
     //it get the distance for all star with player
@@ -68,5 +48,51 @@ public class distanceManager : MonoBehaviour {
         Vector3 playerPos = m_Player.GetComponent<Transform>().position;
         float starDist = Vector3.Distance(playerPos, starPos);
         return starDist;
+    }
+
+    public void mouseEventHanlde()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            ///Debug.Log("Mouse is Down");
+            //Beware of the usage of 2D component
+            RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            if (hitInfo.collider != null)
+            {
+                //Debug.Log("Hit" + hitInfo.transform.gameObject.name);
+                if (hitInfo.transform.gameObject.tag == "Star")
+                {
+                    Debug.Log("Hit" + hitInfo.transform.gameObject.name);
+                }
+                else if (hitInfo.transform.gameObject.tag == "Player")
+                {
+                    hitInfo.transform.gameObject.GetComponent<PlayerBehave>().SendSignal();
+                }
+                else
+                {
+                    Debug.Log("It didn't hit anything");
+                }
+            }
+        }
+    }
+
+    public void keyboardEventHandle()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            m_Star[0].GetComponent<StarBehave>().playSound();
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            m_Star[1].GetComponent<StarBehave>().playSound();
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            m_Star[2].GetComponent<StarBehave>().playSound();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            m_Star[3].GetComponent<StarBehave>().playSound();
+        }
     }
 }
