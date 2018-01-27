@@ -6,6 +6,7 @@ public class distanceManager : MonoBehaviour {
     public GameObject m_Player;
     public GameObject[] m_Star;
     public int starCount;
+    public int[] answerOrder;
 	// Use this for initialization
 	void Start () {
         starCount = m_Star.Length;
@@ -23,7 +24,21 @@ public class distanceManager : MonoBehaviour {
 	void Update () {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Mouse is Down");
+            ///Debug.Log("Mouse is Down");
+            //Beware of the usage of 2D component
+            RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            if (hitInfo.collider != null)
+            {
+                Debug.Log("Hit" + hitInfo.transform.gameObject.name);
+                if(hitInfo.transform.gameObject.tag == "Star")
+                {
+                    Debug.Log("Hit" + hitInfo.transform.gameObject.name);
+                }
+                else
+                {
+                    Debug.Log("It didn't hit anything");
+                }
+            }
         }
     }
 
