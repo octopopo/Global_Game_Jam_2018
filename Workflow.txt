@@ -1,0 +1,4 @@
+1/27 Global Game Jam
+1.setting up script for both player and star, basically what they do now is just adding tag to the object
+2.Now I set up a game manager to handle thing between objects, now it can get the distance between stars and player
+3.the coefficient for the star sound is the distance and divide by 10, it did fit the range of 0~1, but the effect should wait
