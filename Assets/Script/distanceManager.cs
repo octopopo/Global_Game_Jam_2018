@@ -88,7 +88,7 @@ public class distanceManager : MonoBehaviour {
                 //Debug.Log("Hit" + hitInfo.transform.gameObject.name);
                 if (hitInfo.transform.gameObject.tag == "Star")
                 {
-                    Debug.Log("Hit" + hitInfo.transform.gameObject.name);
+                    //Debug.Log("Hit" + hitInfo.transform.gameObject.name);
                     string nameString = hitInfo.transform.gameObject.name;
                     string numString = nameString.Substring(nameString.Length-1);
                     PressingStar(int.Parse(numString));
@@ -140,8 +140,45 @@ public class distanceManager : MonoBehaviour {
         if (starIsPressed[targetStar] == -1)
         {
             starIsPressed[targetStar] = sequenceCount;
-            m_AnsOrder[sequenceCount] = targetStar;
+           // m_AnsOrder[sequenceCount] = targetStar;
             sequenceCount++;
+        }
+        else
+        {
+            int tarNum = starIsPressed[targetStar];
+            //starIsPressed[targetStar] = -1;
+            for(int i = 0; i < starIsPressed.Length; i++)
+            {
+                /*if(starIsPressed[i] != -1 && starIsPressed[i] >= tarNum)
+                {
+                    starIsPressed[i] -= 1;
+                }*/
+                if (starIsPressed[i] >= tarNum)
+                {
+                    starIsPressed[i] = -1;
+                    sequenceCount--;
+                }
+            }
+            /*for(int i = tarNum; i < m_AnsOrder.Length-1; i++)
+            {
+                m_AnsOrder[i] = m_AnsOrder[i + 1];
+            }*/
+        }
+
+        //Vector3 targetStarPos = m_Star[targetStar].GetComponent<Transform>().position;
+        for(int i = 0; i < numberSprite.Length; i++)
+        {
+            numberSprite[i].GetComponent<SpriteRenderer>().enabled = false;
+        }
+        for(int i = 0; i  < starIsPressed.Length; i++)
+        {
+            if(starIsPressed[i] != -1)
+            {
+                Vector3 starPos = m_Star[i].GetComponent<Transform>().position;
+                Vector3 numPos = starPos + new Vector3(1.0f, 0.0f, 0.0f);
+                numberSprite[starIsPressed[i]].GetComponent<Transform>().position = numPos;
+                numberSprite[starIsPressed[i]].GetComponent<SpriteRenderer>().enabled = true;
+            }
         }
     }
 }
