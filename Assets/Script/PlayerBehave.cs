@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerBehave : MonoBehaviour {
 
+    public GameObject m_Wave;
 	// Use this for initialization
 	void Start () {
         tag = "Player";
@@ -13,4 +14,10 @@ public class PlayerBehave : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    //add a function for player to send signal
+    public void SendSignal()
+    {
+        Debug.Log("Send Signal");
+    }
 }

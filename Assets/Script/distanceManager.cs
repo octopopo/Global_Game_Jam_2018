@@ -29,10 +29,14 @@ public class distanceManager : MonoBehaviour {
             RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hitInfo.collider != null)
             {
-                Debug.Log("Hit" + hitInfo.transform.gameObject.name);
+                //Debug.Log("Hit" + hitInfo.transform.gameObject.name);
                 if(hitInfo.transform.gameObject.tag == "Star")
                 {
                     Debug.Log("Hit" + hitInfo.transform.gameObject.name);
+                }
+                else if(hitInfo.transform.gameObject.tag == "Player")
+                {
+                    hitInfo.transform.gameObject.GetComponent<PlayerBehave>().SendSignal();
                 }
                 else
                 {
