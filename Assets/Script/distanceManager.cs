@@ -32,6 +32,12 @@ public class distanceManager : MonoBehaviour {
         {
             starIsPressed[i] = -1;
         }
+
+        //initially set all number sprite invisible
+        foreach(GameObject m_Num in numberSprite)
+        {
+            m_Num.GetComponent<SpriteRenderer>().enabled = false;
+        }
 	}
 	
 	// Update is called once per frame
@@ -109,6 +115,13 @@ public class distanceManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.R))
         {
             m_Star[3].GetComponent<StarBehave>().playSound();
+        }
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            foreach(GameObject m_Num in numberSprite)
+            {
+                m_Num.GetComponent<SpriteRenderer>().enabled = !m_Num.GetComponent<SpriteRenderer>().enabled;
+            }
         }
     }
 }
