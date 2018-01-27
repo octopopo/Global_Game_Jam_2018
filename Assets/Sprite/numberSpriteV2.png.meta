@@ -1,0 +1,457 @@
+fileFormatVersion: 2
+guid: 5daebe6eb5a7e854c899bec00d1117fd
+timeCreated: 1517079776
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: numberSpriteV2_0
+    21300002: numberSpriteV2_1
+    21300004: numberSpriteV2_2
+    21300006: numberSpriteV2_3
+    21300008: numberSpriteV2_4
+    21300010: numberSpriteV2_5
+    21300012: numberSpriteV2_6
+    21300014: numberSpriteV2_7
+    21300016: numberSpriteV2_8
+    21300018: numberSpriteV2_9
+    21300020: numberSpriteV2_10
+    21300022: numberSpriteV2_11
+    21300024: numberSpriteV2_12
+    21300026: numberSpriteV2_13
+    21300028: numberSpriteV2_14
+    21300030: numberSpriteV2_15
+    21300032: numberSpriteV2_16
+    21300034: numberSpriteV2_17
+    21300036: numberSpriteV2_18
+    21300038: numberSpriteV2_19
+    21300040: numberSpriteV2_20
+    21300042: numberSpriteV2_21
+    21300044: numberSpriteV2_22
+    21300046: numberSpriteV2_23
+    21300048: numberSpriteV2_24
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: numberSpriteV2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 239
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 239
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 239
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_3
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 239
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_4
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 239
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_6
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 180
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 180
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_8
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 180
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_9
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 180
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_11
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 120
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_12
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_13
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 120
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_14
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 120
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 60
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_16
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 60
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_17
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 60
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_18
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 60
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_19
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 60
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_21
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 0
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_22
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_23
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: numberSpriteV2_24
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 43
+        height: 43
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

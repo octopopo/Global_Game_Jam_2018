@@ -18,6 +18,7 @@ public class PlayerBehave : MonoBehaviour {
     //add a function for player to send signal
     public void SendSignal()
     {
+        //GameObject tempWave = Instantiate(m_Wave,)
         Debug.Log("Send Signal");
     }
 }

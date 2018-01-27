@@ -5,8 +5,11 @@ using UnityEngine;
 public class distanceManager : MonoBehaviour {
     public GameObject m_Player;
     public GameObject[] m_Star;
+    public GameObject[] numberSprite;
+    public int[] starIsPressed;
     public int starCount;
     public int[] answerOrder;
+    public int sequenceCount = 0;
 	// Use this for initialization
 	void Start () {
         starCount = m_Star.Length;
@@ -17,6 +20,17 @@ public class distanceManager : MonoBehaviour {
         if(m_Star.Length == 0)
         {
             Debug.Log("You haven't assign any star inside");
+        }
+        if(numberSprite.Length == 0)
+        {
+            Debug.Log("You forget to attach the number sprites");
+        }
+        //Initialize the sequence Count and array of storing which was been pressed
+        sequenceCount = 0;
+        starIsPressed = new int[m_Star.Length];
+        for(int i = 0; i < m_Star.Length; i++)
+        {
+            starIsPressed[i] = -1;
         }
 	}
 	
@@ -56,6 +70,7 @@ public class distanceManager : MonoBehaviour {
         {
             ///Debug.Log("Mouse is Down");
             //Beware of the usage of 2D component
+            Vector3 starPos, numberPos;
             RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hitInfo.collider != null)
             {
@@ -63,6 +78,7 @@ public class distanceManager : MonoBehaviour {
                 if (hitInfo.transform.gameObject.tag == "Star")
                 {
                     Debug.Log("Hit" + hitInfo.transform.gameObject.name);
+                    starPos = hitInfo.transform.position;
                 }
                 else if (hitInfo.transform.gameObject.tag == "Player")
                 {

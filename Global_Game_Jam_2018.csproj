@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\distanceManager.cs" />
+    <Compile Include="Assets\Script\NumberBehave.cs" />
     <Compile Include="Assets\Script\PlayerBehave.cs" />
     <Compile Include="Assets\Script\StarBehave.cs" />
   </ItemGroup>
