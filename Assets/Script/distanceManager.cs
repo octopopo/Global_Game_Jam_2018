@@ -6,6 +6,7 @@ public class distanceManager : MonoBehaviour {
     public GameObject m_Player;
     public GameObject[] m_Star;
     public GameObject[] numberSprite;
+    public GameObject m_LevelManager;
     //this array was for storing whether the star has been pressed or not
     public int[] starIsPressed;
     public int starCount;
@@ -29,6 +30,13 @@ public class distanceManager : MonoBehaviour {
         {
             Debug.Log("You forget to attach the number sprites");
         }
+
+        m_LevelManager = GameObject.FindGameObjectWithTag("LevelManager");
+        if(m_LevelManager == null)
+        {
+            Debug.Log("Where is Level Manager");
+        }
+
         //Initialize the sequence Count and array of storing which was been pressed
         sequenceCount = 0;
         starIsPressed = new int[m_Star.Length];
@@ -80,7 +88,7 @@ public class distanceManager : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            ///Debug.Log("Mouse is Down");
+            //Debug.Log("Mouse is Down");
             //Beware of the usage of 2D component
             RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hitInfo.collider != null)
@@ -98,9 +106,20 @@ public class distanceManager : MonoBehaviour {
                 {
                     hitInfo.transform.gameObject.GetComponent<PlayerBehave>().SendSignal();
                 }
-                else
+                else if(hitInfo.transform.gameObject.tag == "SendMessage")
                 {
-                    Debug.Log("It didn't hit anything");
+                    int[] myAnswer = new int[m_Star.Length];
+                    for(int i = 0;i < m_Star.Length; i++)
+                    {
+                        for(int j = 0; j < m_Star.Length; j++)
+                        {
+                            if(starIsPressed[j] == i)
+                            {
+                                myAnswer[i] = j;
+                            }
+                        }
+                    }
+                    m_LevelManager.GetComponent<LevelManager>().CheckAnswer(myAnswer);
                 }
             }
         }

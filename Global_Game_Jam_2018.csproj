@@ -79,9 +79,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\distanceManager.cs" />
+    <Compile Include="Assets\Script\LevelManager.cs" />
     <Compile Include="Assets\Script\NumberBehave.cs" />
     <Compile Include="Assets\Script\PlayerBehave.cs" />
     <Compile Include="Assets\Script\StarBehave.cs" />
+    <Compile Include="Assets\Script\SubmitBehave.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />

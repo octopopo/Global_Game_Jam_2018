@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Star
   - Number
+  - LevelManager
+  - SendMessage
   layers:
   - Default
   - TransparentFX

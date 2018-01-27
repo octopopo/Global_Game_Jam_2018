@@ -13,6 +13,8 @@
 11.Instead of reference prefab of numbers to gameManager, reference the gameobject in the scene instead
 12. attach tag as well as the number behave to the number sprite
 13. now all the number sprite was being reference by an array of game Manager and it will set them to invisible on the beginning. Also, it can be toggled.
+14. add a level manager who store the answer of all level
+15. add a submit button
 
 
 To-do or haven't done
