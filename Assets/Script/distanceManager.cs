@@ -119,7 +119,13 @@ public class distanceManager : MonoBehaviour {
                             }
                         }
                     }
-                    m_LevelManager.GetComponent<LevelManager>().CheckAnswer(myAnswer);
+                    bool isCorrect = m_LevelManager.GetComponent<LevelManager>().CheckAnswer(myAnswer);
+                    Debug.Log("The Answer is: " + isCorrect);
+                    if (!isCorrect)
+                    {
+                        clearArray();
+                        clearNumber();
+                    }
                 }
             }
         }
@@ -185,13 +191,28 @@ public class distanceManager : MonoBehaviour {
         }
 
         //Vector3 targetStarPos = m_Star[targetStar].GetComponent<Transform>().position;
-        for(int i = 0; i < numberSprite.Length; i++)
+        clearNumber();
+        
+    }
+
+    void clearArray()
+    {
+        sequenceCount = 0;
+        for (int i = 0; i < starIsPressed.Length; i++)
+        {
+            starIsPressed[i] = -1;
+        }
+    }
+
+    void clearNumber()
+    {
+        for (int i = 0; i < numberSprite.Length; i++)
         {
             numberSprite[i].GetComponent<SpriteRenderer>().enabled = false;
         }
-        for(int i = 0; i  < starIsPressed.Length; i++)
+        for (int i = 0; i < starIsPressed.Length; i++)
         {
-            if(starIsPressed[i] != -1)
+            if (starIsPressed[i] != -1)
             {
                 Vector3 starPos = m_Star[i].GetComponent<Transform>().position;
                 Vector3 numPos = starPos + new Vector3(1.0f, 0.0f, 0.0f);

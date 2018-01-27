@@ -15,6 +15,7 @@
 13. now all the number sprite was being reference by an array of game Manager and it will set them to invisible on the beginning. Also, it can be toggled.
 14. add a level manager who store the answer of all level
 15. add a submit button
+16. achieve to show the 2-Dimensional Array by using structure and an array inside the struct
 
 
 To-do or haven't done
