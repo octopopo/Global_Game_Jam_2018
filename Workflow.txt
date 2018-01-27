@@ -23,3 +23,5 @@ To-do or haven't done
 4.When player hit the star, it suppose to show the order of answer of that star on a box above the star
 
 5.ask the art team to draw some simple number sprite if it is possible
+
+6.Do the pressed funtion for showing number beside stars

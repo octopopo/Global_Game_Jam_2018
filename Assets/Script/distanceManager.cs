@@ -6,9 +6,13 @@ public class distanceManager : MonoBehaviour {
     public GameObject m_Player;
     public GameObject[] m_Star;
     public GameObject[] numberSprite;
+    //this array was for storing whether the star has been pressed or not
     public int[] starIsPressed;
     public int starCount;
+    //this array store the correct answer
     public int[] answerOrder;
+    //this array store the answer of the player
+    public int[] m_AnsOrder;
     public int sequenceCount = 0;
 	// Use this for initialization
 	void Start () {
@@ -32,6 +36,8 @@ public class distanceManager : MonoBehaviour {
         {
             starIsPressed[i] = -1;
         }
+        //initialize the m_AnsOrder
+        m_AnsOrder = new int[m_Star.Length];
 
         //initially set all number sprite invisible
         foreach(GameObject m_Num in numberSprite)
@@ -76,7 +82,6 @@ public class distanceManager : MonoBehaviour {
         {
             ///Debug.Log("Mouse is Down");
             //Beware of the usage of 2D component
-            Vector3 starPos, numberPos;
             RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hitInfo.collider != null)
             {
@@ -84,7 +89,10 @@ public class distanceManager : MonoBehaviour {
                 if (hitInfo.transform.gameObject.tag == "Star")
                 {
                     Debug.Log("Hit" + hitInfo.transform.gameObject.name);
-                    starPos = hitInfo.transform.position;
+                    string nameString = hitInfo.transform.gameObject.name;
+                    string numString = nameString.Substring(nameString.Length-1);
+                    PressingStar(int.Parse(numString));
+                    //Debug.Log("number extracted: " + numString);
                 }
                 else if (hitInfo.transform.gameObject.tag == "Player")
                 {
@@ -122,6 +130,18 @@ public class distanceManager : MonoBehaviour {
             {
                 m_Num.GetComponent<SpriteRenderer>().enabled = !m_Num.GetComponent<SpriteRenderer>().enabled;
             }
+        }
+    }
+
+    public void PressingStar(int targetStar)
+    {
+        Debug.Log("number passing in is: " + targetStar);
+        // starIsPressed[i] = -1;
+        if (starIsPressed[targetStar] == -1)
+        {
+            starIsPressed[targetStar] = sequenceCount;
+            m_AnsOrder[sequenceCount] = targetStar;
+            sequenceCount++;
         }
     }
 }
